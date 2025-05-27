@@ -14,7 +14,7 @@ const Footer = () => {
       {/* Top Section */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <h1 className="text-center md:text-left mb-4 md:mb-0">
+          <h1 className="text-center font-bold md:text-left mb-4 md:mb-0">
             <span className="text-white text-3xl md:text-4xl">Lets</span>{" "}
             <span className="text-amber-600 text-3xl md:text-4xl">Connect</span>
           </h1>
@@ -120,22 +120,22 @@ const Footer = () => {
             <div className="relative">
               <input
                 type="email"
-                placeholder="Your email address"
-                className="py-2 pl-4 pr-10 text-sm border rounded-full w-full focus:outline-none focus:ring-1 focus:ring-amber-300 text-gray-800"
+                placeholder="Email Address"
+                className="py-2 pl-4 pr-10 text-sm text-white  border rounded-full w-full focus:outline-none focus:ring-1 focus:ring-amber-300"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-amber-500 hover:text-amber-600">
-                <FontAwesomeIcon icon={faPaperPlane} className="h-4 w-4" />
+                <FontAwesomeIcon
+                  icon={faPaperPlane}
+                  className="h-7 w-7 bg-amber-600 text-white rounded-2xl hover:bg-amber-700 transition-colors p-2"
+                />
               </button>
             </div>
-            <p className="text-xs mt-2">
-              We'll never share your email with anyone else.
-            </p>
           </div>
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="bg-amber-600 py-4 text-center text-gray-800 font-medium">
+      <div className="bg-amber-600 py-4 text-center text-white font-medium">
         Copyright © 2025, All Rights Reserved
       </div>
     </footer>
