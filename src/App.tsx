@@ -1,6 +1,5 @@
-/*
+import Navbar from "./components/layout/Navbar";
 import Home from "./components/layout/Home";
-
 import About from "./pages/About";
 import Services from "./components/sections/Services";
 import WorkDone from "./components/sections/WorkDone";
@@ -11,7 +10,10 @@ import Faq from "./components/sections/Faq";
 import NewsLater from "./components/layout/NewsLater";
 import Footer from "./components/layout/Footer";
 
-<Navbar />
+const App = () => {
+  return (
+    <>
+      <Navbar />
       <Home />
       <About />
       <Services />
@@ -22,16 +24,6 @@ import Footer from "./components/layout/Footer";
       <Faq />
       <NewsLater />
       <Footer />
-
-      */
-import Navbar from "./components/layout/Navbar";
-import Home from "./components/layout/Home";
-
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Home />
     </>
   );
 };
