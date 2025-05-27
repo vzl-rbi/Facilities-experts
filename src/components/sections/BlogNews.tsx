@@ -54,13 +54,11 @@ const BlogNews = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center sm:text-left">
-          <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase">
-            - News & Blogs -
-          </p>
+          <p className="text-sm font-bold  text-sky-950">- News & Blogs -</p>
         </div>
 
         <div className="mt-6 flex flex-col items-start gap-y-6 sm:flex-row sm:items-center sm:justify-between mb-12 lg:mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl leading-tight">
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl leading-tight">
             Our Latest <span className="text-amber-600">News & Blogs</span>
           </h2>
 
