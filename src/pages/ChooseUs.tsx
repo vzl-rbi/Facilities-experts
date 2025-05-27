@@ -61,18 +61,13 @@ const ChooseUs = () => {
               <div className="flex items-center justify-center md:justify-end gap-3">
                 <a
                   href="#learn-more-target"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-amber-600 border border-transparent rounded-full shadow-sm hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600 transition-colors whitespace-nowrap"
+                  className="bg-amber-600 text-white font-bold text-sm px-5 py-1.5 rounded-full hover:bg-amber-700 transition-colors w-full md:w-auto"
                 >
                   Learn More
-                  <FontAwesomeIcon
-                    icon={faArrowRight}
-                    className="w-4 h-4 ml-2 text-white"
-                    aria-hidden="true"
-                  />
                 </a>
                 <a
                   href="#learn-more-target"
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-700 transition-colors"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gray-900 hover:bg-gray-700 transition-colors"
                   aria-label="Learn more"
                 >
                   <FontAwesomeIcon

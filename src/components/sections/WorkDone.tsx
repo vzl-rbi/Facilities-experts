@@ -48,7 +48,7 @@ const WorkDone = () => {
           <div className="flex items-center gap-4">
             <a
               href="#learn-more-target"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-amber-600 border border-transparent rounded-full shadow-sm hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600 transition-colors whitespace-nowrap"
+              className="bg-amber-600 text-white font-bold text-sm px-6 py-1.5 rounded-full hover:bg-amber-600 transition-colors md:w-auto"
             >
               Learn More
             </a>
@@ -60,7 +60,7 @@ const WorkDone = () => {
             >
               <FontAwesomeIcon
                 icon={faArrowRight}
-                className="w-4 h-4 text-white"
+                className="w-3 h-3 text-white"
                 aria-hidden="true"
               />
             </a>

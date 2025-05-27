@@ -74,7 +74,7 @@ const Faq = () => {
                 Can't find what you're looking for? Our team is here to help
                 answer any questions you might have.
               </p>
-              <button className="flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-600 text-white font-medium py-2 px-6 rounded-lg transition-colors mx-auto">
+              <button className="flex items-center justify-center gap-2  bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full transition-colors mx-auto cursor-pointer">
                 <FiMail className="w-5 h-5" />
                 Contact Us
               </button>

@@ -69,7 +69,7 @@ const NewsLetter = () => {
           </div>
           <button
             type="submit"
-            className="flex items-center justify-center w-full px-6 py-3 text-sm font-medium text-white bg-amber-600 border border-transparent rounded-md shadow-sm hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600 sm:w-auto sm:text-base transition-colors"
+            className="bg-amber-600 text-white font-bold text-sm px-5 py-1.5 rounded-full hover:bg-amber-700 transition-colors w-full md:w-auto"
           >
             Subscribe
           </button>

@@ -18,7 +18,7 @@ const Footer = () => {
             <span className="text-white text-3xl md:text-4xl">Lets</span>{" "}
             <span className="text-amber-600 text-3xl md:text-4xl">Connect</span>
           </h1>
-          <button className="bg-amber-600 hover:bg-amber-600 text-gray-800 font-medium px-6 py-2 rounded-sm text-sm transition-colors whitespace-nowrap">
+          <button className="bg-amber-600 text-white font-bold text-sm px-5 py-1.5 rounded-full hover:bg-amber-700 transition-colors w-full md:w-auto">
             Contact Us
           </button>
         </div>
