@@ -4,25 +4,26 @@ import handshake from "/src/images/handshake.jpg";
 
 const About = () => {
   return (
-    <>
-      <div className="mx-auto flex flex-col ml-4 mt-5">
-        <p className="text-sm font-semibold text-slate-800">-Who We Are</p>
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      {" "}
+      {/* Added container with responsive padding */}
+      <div className="flex flex-col mt-8 mb-8">
+        <p className="text-sm font-bold text-slate-800">
+          <span className="text-3xl px-2 text-amber-600">-</span>Who We Are
+        </p>
         <h1 className="text-3xl text-amber-600 font-bold">
-          Crafting Excellence{" "}
+          Crafting Excellence
         </h1>
-        <h1 className="text-3xl text-slate-950 font-semibold">
-          in Every Project
-        </h1>
+        <h1 className="text-3xl text-slate-950 font-bold">in Every Project</h1>
       </div>
-
-      <div className="mx-auto flex flex-row justify-between items-center ml-4">
-        <p className="text-stone-950 font-sm">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <p className="text-stone-950 text-base md:max-w-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Optio exercitationem possimus commodi, totam ea consectetur
           <br />
           quibusdam perspiciatis corporis amet nostrum at maiores.
         </p>
-        <div className="flex items-center gap-2 ml-4 mt-4">
+        <div className="flex items-center gap-2">
           <a
             href="#learn-more-target"
             className="bg-amber-600 text-white px-6 py-1.5 rounded-full hover:bg-amber-500 transition-colors md:w-auto"
@@ -42,20 +43,15 @@ const About = () => {
           </a>
         </div>
       </div>
-
-      <div className="flex flex-row items-center justify-center mt-4 gap-3 ml-6 mr-6">
-        {" "}
-        {/* Removed justify-around */}
-        <div className="w-1/2 h-60 overflow-hidden rounded-lg relative">
-          {" "}
-          {/* Added relative positioning */}
+      <div className="flex flex-col md:flex-row gap-4 mb-8">
+        <div className="w-full md:w-1/2 h-60 overflow-hidden rounded-lg relative">
           <img
             src={handshake}
             alt="HandShaking"
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-4 right-3 bg-opacity-70 text-white px-10 py-1 rounded-full">
-            <h1 className=" flex flex-row text-5xl font-bold gap-4 p-4 bg-amber-600 text-white">
+          <div className="absolute bottom-4 right-1 bg-opacity-70 text-white px-10 py-1 rounded-full">
+            <h1 className="flex flex-row text-5xl font-bold gap-4 p-4 bg-amber-600 text-white">
               25+{" "}
               <span className="text-sm font-bold block">
                 <span className="text-3xl">Years</span> <br />
@@ -64,10 +60,8 @@ const About = () => {
             </h1>
           </div>
         </div>
-        <div className="w-1/2 h-60 bg-slate-950 rounded-lg flex flex-col">
-          {" "}
-          {/* Same fixed size */}
-          <p className="text-white p-4 flex-grow">
+        <div className="w-full md:w-1/2 h-60 bg-slate-950 rounded-lg flex flex-col">
+          <p className="text-white p-6 flex-grow">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
             assumenda debitis in veniam inventore distinctio fuga voluptatem,
             consequuntur iusto ab repellendus deserunt dolorum quaerat molestiae
@@ -106,7 +100,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,20 +4,20 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"; // Using free alternative
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "/src/images/logo-vector.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Top Section */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <h1 className="text-center font-bold md:text-left mb-4 md:mb-0">
-            <span className="text-white text-3xl md:text-4xl">Lets</span>{" "}
-            <span className="text-amber-600 text-3xl md:text-4xl">Connect</span>
-          </h1>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-white">
+          <div className=" flex flex-row text-center gap-3 font-bold md:text-left mb-4 md:mb-0">
+            <h1 className="text-white text-3xl md:text-4xl">Lets</h1>
+            <h1 className="text-amber-600 text-3xl md:text-4xl">Connect</h1>
+          </div>
           <button className="bg-amber-600 text-white font-bold text-sm px-5 py-1.5 rounded-full hover:bg-amber-700 transition-colors w-full md:w-auto">
             Contact Us
           </button>
@@ -31,35 +31,35 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Facilities Expert Australia"
-                className="h-12 max-md:h-10"
+                className="h-12 max-md:h-10 object-contain opacity-100" // Changed to ensure full opacity
               />
             </div>
-            <p className="mb-6 text-sm">
+            <p className="mb-6 text-sm text-gray-300">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Obcaecati doloribus dolores blanditiis id provident assumenda.
             </p>
             <div className="flex gap-3">
               <a
                 href="#"
-                className="bg-cyan-900 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-800 transition-colors"
+                className="bg-gray-700 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-600 transition-colors"
               >
                 <FontAwesomeIcon icon={faFacebookF} size="xs" />
               </a>
               <a
                 href="#"
-                className="bg-cyan-900 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-800 transition-colors"
+                className="bg-gray-700 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-600 transition-colors"
               >
                 <FontAwesomeIcon icon={faXTwitter} size="xs" />
               </a>
               <a
                 href="#"
-                className="bg-cyan-900 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-800 transition-colors"
+                className="bg-gray-700 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-600 transition-colors"
               >
                 <FontAwesomeIcon icon={faInstagram} size="xs" />
               </a>
               <a
                 href="#"
-                className="bg-cyan-900 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-800 transition-colors"
+                className="bg-gray-700 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-600 transition-colors"
               >
                 <FontAwesomeIcon icon={faYoutube} size="xs" />
               </a>
@@ -68,25 +68,39 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">Navigation</h2>
+            <h2 className="text-lg font-semibold mb-4 text-white">
+              Navigation
+            </h2>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-gray-300 hover:text-amber-400 transition-colors"
+                >
                   Our Team
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-gray-300 hover:text-amber-400 transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-gray-300 hover:text-amber-400 transition-colors"
+                >
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="#"
+                  className="text-sm text-gray-300 hover:text-amber-400 transition-colors"
+                >
                   Testimonials
                 </a>
               </li>
@@ -95,33 +109,33 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">Contact</h2>
+            <h2 className="text-lg font-semibold mb-4 text-white">Contact</h2>
             <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">📞</span> +9876542732
+              <li className="flex text-sm text-gray-300 items-start">
+                +9876542732
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">✉️</span> info@Facilitiesexpert.com.au
+              <li className="flex text-sm text-gray-300 items-start">
+                info@Facilitiesexpert.com.au
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">📍</span> Address line 1
+              <li className="flex text-sm text-gray-300 items-start">
+                Address line 1
               </li>
-              <li className="flex items-start">
-                <span className="mr-2">📍</span> Address line 2
+              <li className="flex text-sm text-gray-300 items-start">
+                Address line 2
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="text-lg font-semibold mb-4 text-white">
               Get the latest Information
             </h2>
             <div className="relative">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="py-2 pl-4 pr-10 text-sm text-white  border rounded-full w-full focus:outline-none focus:ring-1 focus:ring-amber-300"
+                className="py-2 pl-4 pr-10 text-sm text-white bg-gray-800 border border-gray-700 rounded-full w-full focus:outline-none focus:ring-1 focus:ring-amber-300"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-amber-500 hover:text-amber-600">
                 <FontAwesomeIcon

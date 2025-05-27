@@ -35,12 +35,12 @@ const WorkDone = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center sm:text-left">
-          <p className="text-md font-semibold tracking-widest text-slate-900">
+          <p className="text-md font-bold tracking-widest text-slate-950">
             - How We Work
           </p>
         </div>
 
-        <div className="mt-4 flex flex-col items-start gap-y-6 sm:flex-row sm:items-center sm:justify-between mb-12 lg:mb-16">
+        <div className="mt-1 flex flex-col items-start gap-y-6 sm:flex-row sm:items-center sm:justify-between mb-12 lg:mb-16">
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl leading-tight">
             How we <span className="text-amber-600">Get It Done</span>
           </h2>
@@ -72,9 +72,13 @@ const WorkDone = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="flex flex-col items-center p-6 text-center bg-slate-50 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
+              className="flex flex-col p-6 bg-slate-50 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
             >
-              <span className="mb-4 inline-block rounded-full bg-slate-900 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-600">
+              <span
+                className={`mb-3 rounded-full py-1 text-xs font-semibold uppercase ${
+                  step.id === 1 ? "bg-slate-900 text-white px-3 w-fit" : "px-0"
+                }`}
+              >
                 {step.badge}
               </span>
               <h3 className="mb-3 text-xl font-bold text-slate-800">

@@ -3,12 +3,15 @@ import {
   faArrowRight,
   faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
+import workProgress from "/src/images/work-in-progress.jpg";
+import civilEngineer from "/src/images/civil-engineering.webp";
+import worker from "/src/images/worker.jpg";
 
 const BlogNews = () => {
   const blogPosts = [
     {
       id: 1,
-      imgSrc: "../src/images/civil-engineering.png",
+      imgSrc: civilEngineer,
       imgAlt: "Civil engineering project with cranes and buildings",
       category: "Construction Trends",
       date: new Date(2025, 0, 15),
@@ -19,7 +22,7 @@ const BlogNews = () => {
     },
     {
       id: 2,
-      imgSrc: "../src/images/work-in-progress.png",
+      imgSrc: workProgress,
       imgAlt: "Construction site with work in progress signs",
       category: "Construction Trends",
       date: new Date(2025, 0, 15),
@@ -30,7 +33,7 @@ const BlogNews = () => {
     },
     {
       id: 3,
-      imgSrc: "../src/images/worker.png",
+      imgSrc: worker,
       imgAlt: "Construction worker with safety helmet and tools",
       category: "Construction Trends",
       date: new Date(2025, 0, 15),
@@ -95,13 +98,7 @@ const BlogNews = () => {
                 <img
                   src={post.imgSrc}
                   alt={post.imgAlt}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{
-                    clipPath:
-                      "polygon(0 15px, 15px 0, 100% 0, 100% 100%, 0 100%)",
-                    WebkitClipPath:
-                      "polygon(0 15px, 15px 0, 100% 0, 100% 100%, 0 100%)",
-                  }}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 [clip-path:polygon(40px_0,100%_0,100%_100%,0_100%,0_40px)] md:[clip-path:polygon(80px_0,100%_0,100%_100%,0_100%,0_80px)]"
                 />
               </div>
 
