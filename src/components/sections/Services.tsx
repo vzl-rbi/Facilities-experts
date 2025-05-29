@@ -1,31 +1,37 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import businessDoors from "/src/images/business-doors.webp";
 
-const services = [
-  {
-    id: 1,
-    img: businessDoors,
-    title: "Residential Doors",
-    description: "High-quality residential door solutions for your home.",
-  },
-  {
-    id: 2,
-    img: businessDoors,
-    title: "Commercial Doors",
-    description: "Durable and secure doors for business establishments.",
-  },
-  {
-    id: 3,
-    img: businessDoors,
-    title: "Custom Doors",
-    description: "Tailored door solutions to match your specific needs.",
-  },
-];
+interface Service {
+  id: number;
+  img: string;
+  title: string;
+  description: string;
+}
 
 const Services = () => {
+  const services: Service[] = [
+    {
+      id: 1,
+      img: "/src/images/business-doors.webp",
+      title: "Residential Doors",
+      description: "High-quality residential door solutions for your home.",
+    },
+    {
+      id: 2,
+      img: "/src/images/business-doors.webp",
+      title: "Commercial Doors",
+      description: "Durable and secure doors for business establishments.",
+    },
+    {
+      id: 3,
+      img: "/src/images/business-doors.webp",
+      title: "Custom Doors",
+      description: "Tailored door solutions to match your specific needs.",
+    },
+  ];
+
   return (
-    <section className="bg-gray-200 py-12">
+    <section id="services" className="bg-gray-200 py-12 mt-20">
       {/* Section Header */}
       <div className="text-center mb-12">
         <p className="text-sm font-bold text-slate-950">
@@ -46,14 +52,13 @@ const Services = () => {
                 clipPath: "polygon(90px 0, 100% 0, 100% 100%, 0 100%, 0 90px)",
               }}
             >
-              {/* Image Container */}
               <div className="relative h-60">
                 <img
                   className="w-full h-full object-cover"
                   src={service.img}
                   alt={service.title}
+                  loading="lazy"
                 />
-                {/* Home Icon Circle */}
                 <div className="absolute bottom-0 left-0 mb-[-20px] ml-[20px] w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +77,6 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* Text Content */}
               <div className="p-6">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">
                   {service.title}
@@ -89,6 +93,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+
       <div className="flex items-center justify-center mt-4">
         <div className="flex items-center gap-2">
           <a

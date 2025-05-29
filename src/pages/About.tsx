@@ -4,7 +4,7 @@ import handshake from "/src/images/handshake.jpg";
 
 const About = () => {
   return (
-    <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div id="projects" className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       {" "}
       {/* Added container with responsive padding */}
       <div className="flex flex-col mt-8 mb-8">

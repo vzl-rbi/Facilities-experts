@@ -10,7 +10,7 @@ import logo from "/src/images/logo-vector.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer id="contact-us" className="bg-gray-900 text-white">
       {/* Top Section */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-white">

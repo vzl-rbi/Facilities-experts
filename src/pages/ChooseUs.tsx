@@ -42,7 +42,7 @@ const features = [
 
 const ChooseUs = () => {
   return (
-    <div className="bg-white">
+    <div id="about-us" className="bg-white">
       {/* Top Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-10">
         <div className="max-w-7xl mx-auto">
