@@ -11,7 +11,7 @@ const About = () => {
         <p className="text-sm font-bold text-slate-800">
           <span className="text-3xl px-2 text-amber-600">-</span>Who We Are
         </p>
-        <h1 className="text-3xl text-amber-600 font-bold">
+        <h1 className="text-3xl text-amber-700 font-bold">
           Crafting Excellence
         </h1>
         <h1 className="text-3xl text-slate-950 font-bold">in Every Project</h1>

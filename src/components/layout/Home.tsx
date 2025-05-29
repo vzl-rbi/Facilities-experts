@@ -46,7 +46,7 @@ const Home = () => {
       {/* Image + Stats with Background Half Behind */}
       <div className="relative mt-14 pb-20">
         {/* Changed: Full-width blue background (no horizontal margins) */}
-        <div className="absolute inset-x-0 top-1/2 h-1/2 bg-[#2e6678] z-0 -mx-4 sm:-mx-6 lg:-mx-8" />
+        <div className="absolute top-1/2 left-1/2 h-1/2 bg-[#2e6678] z-0 w-screen -translate-x-1/2" />
 
         <div className="relative z-10 flex flex-col md:flex-row gap-4 items-center">
           {/* Image Block */}

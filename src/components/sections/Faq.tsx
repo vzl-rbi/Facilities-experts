@@ -1,4 +1,4 @@
-import { FiPlus, FiMail } from "react-icons/fi";
+import { FiMinus, FiPlus } from "react-icons/fi";
 import question from "/src/images/question.png";
 
 const Faq = () => {
@@ -7,11 +7,11 @@ const Faq = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">
-            - FAQs -
+          <p className="text-sm font-bold text-gray-950 tracking-wider">
+            <span className="text-3xl px-2 text-amber-600">-</span>FAQs
           </p>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-            Questions? <span className="text-amber-600">Look Here</span>
+            Questions? <span className="text-amber-700">Look Here</span>
           </h1>
         </div>
 
@@ -19,28 +19,22 @@ const Faq = () => {
           {/* Questions Column */}
           <div className="flex-1 space-y-6">
             {/* Question 1 */}
-            <div className="group border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="group border-2 border-gray-950 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between p-4 cursor-pointer bg-white">
-                <h3 className="font-medium text-gray-900">First Question?</h3>
-                <FiPlus className="text-gray-500 group-hover:text-amber-600 transition-colors" />
-              </div>
-              <div className="px-4 pb-4 pt-0 bg-gray-50 hidden group-focus:block">
-                <p className="text-gray-600">
-                  Answer to the first question would appear here when expanded.
-                </p>
+                <h3 className="text-xl font-bold text-gray-950">
+                  First Question ?
+                </h3>
+                <FiPlus className="text-gray-950 group-hover:text-amber-600 transition-colors" />
               </div>
             </div>
 
             {/* Question 2 */}
-            <div className="group border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-between p-4 cursor-pointer bg-white">
-                <h3 className="font-medium text-gray-900">Second Question?</h3>
-                <FiPlus className="text-gray-500 group-hover:text-amber-600 transition-colors" />
-              </div>
-              <div className="px-4 pb-4 pt-0 bg-gray-50 hidden group-focus:block">
-                <p className="text-gray-600">
-                  Answer to the second question would appear here when expanded.
-                </p>
+            <div className="group border-2 border-gray-950 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between p-4 cursor-pointer">
+                <h3 className="text-xl font-bold text-gray-900">
+                  Second Question ?
+                </h3>
+                <FiPlus className="text-gray-950 group-hover:text-amber-600 transition-colors" />
               </div>
             </div>
 
@@ -48,7 +42,7 @@ const Faq = () => {
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
               <div className="flex items-center justify-between p-4 cursor-pointer  bg-gray-900">
                 <h3 className="font-medium text-white">Third Question?</h3>
-                <FiPlus className="text-gray-500 transform rotate-45" />
+                <FiMinus className="text-white" />
               </div>
               <div className="px-4 pb-4 pt-0  bg-gray-900">
                 <p className="text-white">
@@ -68,14 +62,13 @@ const Faq = () => {
                 <img src={question} alt="Question" className="w-8 h-8" />
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">
-                Have a Question?
+                Have Different <br /> Question?
               </h2>
               <p className="text-white mb-6">
                 Can't find what you're looking for? Our team is here to help
                 answer any questions you might have.
               </p>
               <button className="flex items-center justify-center gap-2  bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full transition-colors mx-auto cursor-pointer">
-                <FiMail className="w-5 h-5" />
                 Contact Us
               </button>
             </div>

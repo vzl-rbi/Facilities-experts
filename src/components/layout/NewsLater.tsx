@@ -7,12 +7,13 @@ const NewsLetter = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-bold tracking-widest text-gray-950">
-            - Our Newsletter -
+            <span className="text-3xl px-2 text-amber-600">-</span>Our
+            Newsletter
           </p>
           <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
             Join Our Newsletter For
             <br />
-            <span className="text-amber-600">Exclusive Deals and Insights</span>
+            <span className="text-amber-700">Exclusive Deals and Insights</span>
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600 sm:mt-6">
             Stay updated with our latest offers, news, and valuable content

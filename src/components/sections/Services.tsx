@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import businessDoors from "/src/images/business-doors.webp";
 
 const services = [
@@ -29,7 +31,7 @@ const Services = () => {
         <p className="text-sm font-bold text-slate-950">
           <span className="text-3xl px-2 text-amber-600">-</span>Our Services
         </p>
-        <h1 className="text-4xl text-amber-600 font-bold">Services That Fit</h1>
+        <h1 className="text-4xl text-amber-700 font-bold">Services That Fit</h1>
         <h1 className="text-4xl text-slate-950 font-bold">Your Need</h1>
       </div>
 
@@ -41,8 +43,7 @@ const Services = () => {
               key={service.id}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow relative"
               style={{
-                clipPath:
-                  "polygon(105px 0, 100% 0, 100% 100%, 0 100%, 0 105px)",
+                clipPath: "polygon(90px 0, 100% 0, 100% 100%, 0 100%, 0 90px)",
               }}
             >
               {/* Image Container */}
@@ -56,7 +57,7 @@ const Services = () => {
                 <div className="absolute bottom-0 left-0 mb-[-20px] ml-[20px] w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-white"
+                    className="h-6 w-6 text-white cursor-pointer"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -86,6 +87,27 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-4">
+        <div className="flex items-center gap-2">
+          <a
+            href="#learn-more-target"
+            className="bg-amber-600 text-white px-6 py-1.5 rounded-full hover:bg-amber-600 transition-colors md:w-auto"
+          >
+            View All Services
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-900 hover:bg-slate-700 transition-colors"
+            aria-label="View All Services"
+          >
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="w-4 h-4 text-white"
+              aria-hidden="true"
+            />
+          </a>
         </div>
       </div>
     </section>

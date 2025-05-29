@@ -42,7 +42,7 @@ const WorkDone = () => {
 
         <div className="mt-1 flex flex-col items-start gap-y-6 sm:flex-row sm:items-center sm:justify-between mb-12 lg:mb-16">
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl leading-tight">
-            How we <span className="text-amber-600">Get It Done</span>
+            How we <span className="text-amber-700">Get It Done</span>
           </h2>
 
           <div className="flex items-center gap-4">

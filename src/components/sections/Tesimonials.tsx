@@ -78,7 +78,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-sm font-medium text-white tracking-wider">
-            - Testimonials{" "}
+            <span className="text-3xl px-2 text-amber-600">-</span> Testimonials
           </p>
           <h2 className="text-4xl text-amber-600 font-bold mt-2">
             Experiences Shared By
