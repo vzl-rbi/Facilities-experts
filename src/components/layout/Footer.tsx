@@ -10,7 +10,7 @@ import logo from "/src/images/logo-vector.svg";
 
 const Footer = () => {
   return (
-    <footer id="contact-us" className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Top Section */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-white">
@@ -146,11 +146,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="bg-amber-600 py-4 text-center text-white font-medium">
-        Copyright © 2025, All Rights Reserved
       </div>
     </footer>
   );

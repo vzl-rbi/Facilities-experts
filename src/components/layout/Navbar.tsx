@@ -1,3 +1,4 @@
+import { Link, useLocation } from "react-router-dom";
 import {
   faPhoneAlt,
   faEnvelope,
@@ -16,40 +17,33 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const location = useLocation();
 
-  // Define navigation items with their labels and target section IDs
+  // Define navigation items with their labels, target section IDs, and paths
   const navLinksData = [
-    { label: "Home", sectionId: "hero" }, // Assumes a section with id="hero" for the Home link
-    { label: "Services", sectionId: "services" },
-    { label: "Projects", sectionId: "projects" },
-    { label: "Blogs", sectionId: "blogs" },
-    { label: "About Us", sectionId: "about-us" },
-    { label: "Contact Us", sectionId: "contact-us" },
+    { label: "Home", sectionId: "hero", path: "/" },
+    { label: "Services", sectionId: "services", path: "/" },
+    { label: "Projects", sectionId: "projects", path: "/" },
+    { label: "Blogs", sectionId: "blogs", path: "/" },
+    { label: "About Us", sectionId: "about-us", path: "/" },
+    { label: "Contact Us", path: "/contact-us" },
   ];
 
   const handleClickScroll = (sectionId: string): void => {
-    setMobileMenuOpen(false); // Close mobile menu when a link is clicked
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarElement = document.querySelector("header");
+      const navbarHeight = navbarElement?.offsetHeight || 0;
 
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const navbarElement = document.querySelector("header");
-        const navbarHeight = navbarElement?.offsetHeight || 0;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight - 20;
 
-        const elementPosition =
-          element.getBoundingClientRect().top + window.pageYOffset;
-        // Adjust offset to account for fixed navbar height and add some padding
-        const offsetPosition = elementPosition - navbarHeight - 20;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      } else {
-        // Optional: Log a warning if the element is not found, useful for debugging
-        console.warn(`Element with ID "${sectionId}" not found.`);
-      }
-    }, 100); // Small delay to ensure menu is closed before scrolling
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -71,21 +65,16 @@ const Navbar = () => {
         isScrolled ? "bg-white/95 shadow-md py-3" : "bg-transparent py-5"
       }`}
     >
-      <div
-        // Main container for navbar content
-        className="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-5"
-      >
+      <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-5">
         <div className="flex items-center mr-8">
-          {" "}
-          {/* Logo */}
           <img
-            src="/src/images/logo-vector.svg" // Ensure this path is correct for your project
+            src="/src/images/logo-vector.svg"
             alt="Facilities Expert Australia"
             className="h-[70px] max-md:h-12"
           />
         </div>
 
-        <button // Mobile menu toggle button
+        <button
           className={`md:hidden ml-auto p-2 ${mobileToggleColor}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
@@ -94,18 +83,13 @@ const Navbar = () => {
           <FontAwesomeIcon icon={mobileMenuOpen ? faTimes : faBars} size="lg" />
         </button>
 
-        {/* Container for navigation elements (contact, social, nav links, quote) */}
-        {/* This div is toggled on mobile and lays out content as a column on desktop (md:flex-col) */}
         <div
           className={`${
-            mobileMenuOpen ? "block w-full mt-4 md:mt-0" : "hidden" // Full width on mobile when open
-          } md:flex md:flex-col md:flex-grow md:w-auto md:items-stretch`} // md:items-stretch to make children take full width available in flex-col
+            mobileMenuOpen ? "block w-full mt-4 md:mt-0" : "hidden"
+          } md:flex md:flex-col md:flex-grow md:w-auto md:items-stretch`}
         >
-          {/* Top Row: Contact Info & Social Icons */}
           <div className="flex flex-col md:flex-row justify-between items-center w-full mb-3 md:mb-2 max-md:gap-3">
-            {/* Contact Information */}
             <div className="flex flex-col md:flex-row items-start md:items-center gap-y-2 md:gap-x-8 text-sm text-gray-800">
-              {/* For transparent header, text-gray-800 will be visible. Adjust if needed. */}
               <span>
                 <FontAwesomeIcon
                   icon={faPhoneAlt}
@@ -122,13 +106,12 @@ const Navbar = () => {
               </span>
             </div>
 
-            {/* Social Media Icons */}
             <div className="flex gap-2 max-md:self-end">
               {[faFacebookF, faXTwitter, faInstagram, faYoutube].map(
                 (icon, index) => (
                   <a
                     key={index}
-                    href="#" // Replace with actual social media links
+                    href="#"
                     className="bg-cyan-900 text-white w-6 h-6 flex items-center justify-center rounded-full text-xs hover:bg-gray-700 transition-colors"
                     aria-label={`Follow us on ${
                       icon.iconName === "x-twitter"
@@ -143,23 +126,28 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Bottom Row: Navigation Links & Get a Quote Button */}
           <div className="flex flex-col md:flex-row justify-between items-center w-full border-t border-gray-200 pt-3 md:pt-4 gap-3 md:gap-0">
             <nav aria-label="Main navigation">
               <ul className="flex list-none flex-col md:flex-row items-start md:items-center gap-y-2 md:gap-x-4 w-full md:w-auto">
                 {navLinksData.map((navItem) => (
                   <li key={navItem.label} className="w-full md:w-auto">
-                    <button
-                      type="button"
-                      onClick={() => handleClickScroll(navItem.sectionId)}
+                    <Link
+                      to={navItem.path}
                       className={`block w-full md:w-auto text-left md:text-center px-2 py-2 rounded font-semibold text-sm capitalize transition-colors duration-300 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500/50 ${
-                        isScrolled
-                          ? "text-gray-700" // Color for scrolled state
-                          : "text-gray-950" // Color for non-scrolled state (transparent header)
+                        isScrolled ? "text-gray-700" : "text-gray-950"
                       }`}
+                      onClick={(e) => {
+                        setMobileMenuOpen(false);
+
+                        // Only handle scroll if on homepage and section exists
+                        if (location.pathname === "/" && navItem.sectionId) {
+                          e.preventDefault();
+                          handleClickScroll(navItem.sectionId);
+                        }
+                      }}
                     >
                       {navItem.label}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
