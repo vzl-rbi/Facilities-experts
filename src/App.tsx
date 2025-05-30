@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Home from "./components/layout/Home";
 import About from "./pages/About";
-import Services from "./components/sections/Services";
+import UrNeed from "./components/sections/UrNeed";
 import WorkDone from "./components/sections/WorkDone";
 import ChooseUs from "./pages/ChooseUs";
 import Testimonials from "./components/sections/Tesimonials";
@@ -12,6 +12,9 @@ import NewsLater from "./components/layout/NewsLater";
 import Footer from "./components/layout/Footer";
 import Contact from "./components/layout/Contact";
 import AboutUs from "./components/layout/AboutUs";
+import Services from "./components/layout/Services";
+import Projects from "./components/layout/Project";
+import Blogs from "./components/layout/Blogs";
 
 const App = () => {
   return (
@@ -24,7 +27,7 @@ const App = () => {
             <>
               <Home />
               <About />
-              <Services />
+              <UrNeed />
               <WorkDone />
               <ChooseUs />
               <Testimonials />
@@ -44,6 +47,8 @@ const App = () => {
         <Route path="/news-later" element={<NewsLater />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
 
       <Footer />

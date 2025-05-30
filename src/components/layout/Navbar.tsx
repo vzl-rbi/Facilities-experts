@@ -22,9 +22,9 @@ const Navbar = () => {
   // Define navigation items with their labels, target section IDs, and paths
   const navLinksData = [
     { label: "Home", sectionId: "hero", path: "/" },
-    { label: "Services", sectionId: "services", path: "/" },
-    { label: "Projects", sectionId: "projects", path: "/" },
-    { label: "Blogs", sectionId: "blogs", path: "/" },
+    { label: "Services", path: "/services" },
+    { label: "Projects", path: "/projects" },
+    { label: "Blogs", path: "/blogs" },
     { label: "About Us", path: "/about-us" },
     { label: "Contact Us", path: "/contact-us" },
   ];
