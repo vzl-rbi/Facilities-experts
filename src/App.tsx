@@ -11,6 +11,7 @@ import Faq from "./components/sections/Faq";
 import NewsLater from "./components/layout/NewsLater";
 import Footer from "./components/layout/Footer";
 import Contact from "./components/layout/Contact";
+import AboutUs from "./components/layout/AboutUs";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/faq" element={<Faq />} />
         <Route path="/news-later" element={<NewsLater />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
 
       <Footer />

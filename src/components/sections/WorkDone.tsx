@@ -75,7 +75,7 @@ const WorkDone = () => {
               className="flex flex-col p-6 bg-slate-50 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
             >
               <span
-                className={`mb-3 rounded-full py-1 text-xs font-semibold uppercase ${
+                className={`mb-3 rounded-full py-1 text-xs font-semibold uppercase cursor-pointer ${
                   step.id === 1 ? "bg-slate-900 text-white px-3 w-fit" : "px-0"
                 }`}
               >

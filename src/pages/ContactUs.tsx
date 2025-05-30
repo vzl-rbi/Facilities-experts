@@ -65,10 +65,13 @@ const ContactUs = () => {
   return (
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-white rounded-lg shadow-lg">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Contact Our Construction Experts
+        <h2 className="text-3xl font-extrabold text-gray-950 sm:text-4xl">
+          Contact Our <br />
+          <span className="text-3xl font-extrabold text-amber-700 sm:text-4xl">
+            Construction Experts
+          </span>
         </h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-sm font-semibold text-gray-950">
           Have questions about your project? Get in touch with our team of
           professionals.
         </p>
@@ -77,9 +80,7 @@ const ContactUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Information */}
         <div className="bg-gray-50 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">
-            Our Office
-          </h3>
+          <h3 className="text-xl font-bold text-gray-950 mb-4">Our Office</h3>
           <div className="space-y-4">
             <div className="flex items-start">
               <div className="flex-shrink-0">
@@ -104,8 +105,8 @@ const ContactUs = () => {
                 </svg>
               </div>
               <div className="ml-3">
-                <p className="text-gray-700">123 Construction Way</p>
-                <p className="text-gray-700">Building City, BC 12345</p>
+                <p className="text-gray-950">123 Construction Way</p>
+                <p className="text-gray-950">Building City, BC 12345</p>
               </div>
             </div>
 
@@ -126,8 +127,8 @@ const ContactUs = () => {
                 </svg>
               </div>
               <div className="ml-3">
-                <p className="text-gray-700">(555) 123-4567</p>
-                <p className="text-gray-700">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                <p className="text-gray-950">(555) 123-4567</p>
+                <p className="text-gray-950">Mon-Fri: 8:00 AM - 5:00 PM</p>
               </div>
             </div>
 
@@ -148,8 +149,8 @@ const ContactUs = () => {
                 </svg>
               </div>
               <div className="ml-3">
-                <p className="text-gray-700">info@constructionexperts.com</p>
-                <p className="text-gray-700">
+                <p className="text-gray-950">info@constructionexperts.com</p>
+                <p className="text-gray-950">
                   emergency@constructionexperts.com
                 </p>
               </div>
@@ -157,20 +158,20 @@ const ContactUs = () => {
           </div>
 
           <div className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-xl font-bold text-gray-950 mb-4">
               Service Areas
             </h3>
             <div className="grid grid-cols-2 gap-2">
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
+              <span className="bg-gray-900 text-white text-sm font-medium px-3 py-1 rounded cursor-pointer">
                 City 1
               </span>
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
+              <span className="bg-gray-900 text-white text-sm font-medium px-3 py-1 rounded cursor-pointer">
                 City 2
               </span>
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
+              <span className="bg-gray-900 text-white text-sm font-medium px-3 py-1 rounded cursor-pointer">
                 City 3
               </span>
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">
+              <span className="bg-gray-900 text-white text-sm font-medium px-3 py-1 rounded cursor-pointer">
                 City 4
               </span>
             </div>
@@ -194,15 +195,15 @@ const ContactUs = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <h3 className="mt-4 text-lg font-medium text-green-800">
+              <h3 className="mt-4 text-lg font-medium text-gray-950">
                 Thank you for your inquiry!
               </h3>
-              <p className="mt-2 text-green-600">
+              <p className="mt-2 text-gray-950">
                 Our team will get back to you within 24 hours.
               </p>
               <button
                 onClick={() => setSubmitSuccess(false)}
-                className="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-amber-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Send another message
               </button>
@@ -212,7 +213,7 @@ const ContactUs = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-950"
                 >
                   Full Name
                 </label>
@@ -230,7 +231,7 @@ const ContactUs = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-950"
                 >
                   Email Address
                 </label>
@@ -248,7 +249,7 @@ const ContactUs = () => {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-950"
                 >
                   Phone Number
                 </label>
@@ -265,7 +266,7 @@ const ContactUs = () => {
               <div>
                 <label
                   htmlFor="serviceNeeded"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-950"
                 >
                   Service Needed
                 </label>
@@ -274,7 +275,7 @@ const ContactUs = () => {
                   name="serviceNeeded"
                   value={formData.serviceNeeded}
                   onChange={handleChange}
-                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full border border-gray-950 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
                   {serviceOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -287,7 +288,7 @@ const ContactUs = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-950"
                 >
                   Project Details
                 </label>
@@ -306,7 +307,7 @@ const ContactUs = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+                  className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 cursor-pointer ${
                     isSubmitting ? "opacity-75 cursor-not-allowed" : ""
                   }`}
                 >
